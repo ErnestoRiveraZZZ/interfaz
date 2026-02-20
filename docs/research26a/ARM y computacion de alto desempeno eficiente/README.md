@@ -36,6 +36,30 @@ Esto es ideal para la nube y el HPC, donde las tareas suelen ser "paralelizables
 
 ---
 
+## Comparación entre ARM y arquitecturas tradicionales en HPC
+
+| Característica | ARM en HPC | x86 tradicional |
+|---|---|---|
+| Consumo energético | Bajo | Alto |
+| Rendimiento por watt | Muy alto | Medio |
+| Escalabilidad | Alta | Alta |
+| Uso en supercómputo | Creciente (ej. Fugaku) | Dominante históricamente |
+| Enfoque principal | Eficiencia energética | Potencia bruta |
+
+## Flujo simplificado de eficiencia en ARM
+
+
+
+```mermaid
+flowchart LR
+A[Arquitectura RISC] --> B[Menor consumo]
+B --> C[Menos calor]
+C --> D[Mayor densidad de cómputo]
+D --> E[Mejor rendimiento por watt]
+```
+
+---
+
 ##  Tecnologías Clave en ARM HPC
 
 # SVE (Scalable Vector Extension)
@@ -47,6 +71,20 @@ En términos simples, SVE permite al procesador realizar operaciones matemática
 Al igual que en los celulares, la tendencia en HPC es integrar todo en el mismo chip.
 * Memoria Unificada: En lugar de tener la memoria RAM lejos del procesador, chips como el **NVIDIA Grace Hopper** (basado en ARM) integran memoria de alto ancho de banda (HBM) justo al lado de los núcleos.
 * Interconexión: Se integran redes de alta velocidad dentro del chip para que los cientos de núcleos se comuniquen sin latencia.
+
+---
+
+## Comparativa Técnica de Arquitecturas
+
+Una comparación más detallada entre ARM y x86 en entornos HPC muestra diferencias arquitectónicas clave:
+
+| Elemento | ARM (RISC) | x86 (CISC) |
+|----------|------------|------------|
+| Tipo de instrucciones | Simples y optimizadas | Complejas |
+| Consumo energético | Bajo | Alto |
+| Escalabilidad en núcleos | Alta | Media |
+| Personalización | Alta (licenciamiento flexible) | Baja |
+| Enfoque actual | Cloud e IA eficiente | Potencia tradicional |
 
 ---
 
@@ -124,7 +162,7 @@ Al iniciar esta investigación, pensaba que ARM solo servía para ahorrar bater�
 El límite de la computación ya no es cuánto silicio podemos poner en un chip, sino cuánto calor podemos disipar sin derretirlo. En este escenario, la arquitectura ARM y la computación eficiente no son solo una alternativa barata, sino el camino necesario para sostener el crecimiento de la Inteligencia Artificial y la nube de manera sostenible.
 
  Referencias Bibliográficas: 
-Fujitsu. (2024). Supercomputer Fugaku.
+Fujitsu. (2024). *Supercomputer Fugaku Overview*. https://www.fujitsu.com
 
 Amazon Web Services. (2025). AWS Graviton Processor - Arm-based cloud compute. 
 
